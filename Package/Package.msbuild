@@ -23,7 +23,7 @@
     </ItemGroup>
     <MakeDir Directories="Binaries\lib\net40\merged" />
     <Copy SourceFiles="@(BinariesNet40)" DestinationFolder="Binaries\lib\net40" />
-    <Exec Command="ilmerge /targetplatform:v4,%systemroot%\Microsoft.NET\Framework\v4.0.30319 /out:Binaries\lib\net40\merged\IronJS.dll Binaries\lib\net40\IronJS.dll Binaries\lib\net40\IronJS.Runtime.dll" />
+    <Exec Command="ilmerge /targetplatform:v4,%systemroot%\Microsoft.NET\Framework\v4.0 /out:Binaries\lib\net40\merged\IronJS.dll Binaries\lib\net40\IronJS.dll Binaries\lib\net40\IronJS.Runtime.dll" />
     <ItemGroup>
       <ClearNet40 Include="Binaries\lib\net40\IronJS*.*;Binaries\lib\net40\FSharp*.*;Binaries\lib\net40\Microsoft*.*" />
     </ItemGroup>
